@@ -16,6 +16,8 @@ int main() {
 
     Volcano volcano(width/2, height/2, &texture, sf::IntRect( 0,0,500,500));
 
+    volcano.setPosition(sf::Vector2f(width/4, height/2));
+
     while(window.isOpen()) {
         window.clear();
 

@@ -3,11 +3,11 @@
 
 #include <SFML/Graphics.hpp>
 
-class Volcano : public sf::Drawable, public sf::Transformable {
+class Volcano : public sf::Sprite {
 
     int width, height;
 
-    sf::Sprite sprite;
+    //sf::Sprite sprite;
 
 public:
 
@@ -17,11 +17,11 @@ public:
 
     void errupt();
 
-private:
+/*private:
     virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const {
         states.transform *= getTransform();
         target.draw(sprite);
-    }
+    }*/
 };
 
 #endif // VOLCANO_HPP_INCLUDED
