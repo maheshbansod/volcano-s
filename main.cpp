@@ -3,14 +3,18 @@
 #include "Volcano.hpp"
 
 #define WIDTH 800
-#define HEIGHT 400
+#define HEIGHT 600
 
 int main() {
     sf::RenderWindow window(sf::VideoMode(WIDTH, HEIGHT), "Volcano");
     int width = window.getSize().x;
     int height = window.getSize().y;
 
-    Volcano volcano(width/2, height/2);
+    sf::Texture texture;
+
+    texture.loadFromFile("volcano-white.png");
+
+    Volcano volcano(width/2, height/2, &texture, sf::IntRect( 0,0,500,500));
 
     while(window.isOpen()) {
         window.clear();

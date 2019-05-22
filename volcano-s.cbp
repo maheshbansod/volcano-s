@@ -30,7 +30,19 @@
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
+			<Add directory="/home/mahesh/apps/SFML-2.5.1/include" />
 		</Compiler>
+		<Linker>
+			<Add library="sfml-graphics" />
+			<Add library="sfml-window" />
+			<Add library="sfml-system" />
+			<Add directory="/home/mahesh/apps/SFML-2.5.1/lib" />
+		</Linker>
+		<Unit filename="Volcano.cpp" />
+		<Unit filename="Volcano.hpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="main.cpp" />
 		<Extensions>
 			<envvars />
 			<code_completion />

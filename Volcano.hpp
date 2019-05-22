@@ -7,9 +7,11 @@ class Volcano : public sf::Drawable, public sf::Transformable {
 
     int width, height;
 
+    sf::Sprite sprite;
+
 public:
 
-    Volcano(int, int);
+    Volcano(int, int, sf::Texture*, sf::IntRect);
 
     void update();
 
@@ -17,7 +19,8 @@ public:
 
 private:
     virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const {
-        ;
+        states.transform *= getTransform();
+        target.draw(sprite);
     }
 };
 

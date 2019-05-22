@@ -1,8 +1,14 @@
 #include "Volcano.hpp"
 
-Volcano::Volcano(int width, int height) {
+Volcano::Volcano(int width, int height, sf::Texture* texture, sf::IntRect bounds)
+    {
     this->width = width;
     this->height = height;
+
+    sprite.setTexture(*texture);
+    sprite.setTextureRect(bounds);
+    sprite.setColor(sf::Color(255,127,0));
+    sprite.setScale(sf::Vector2f(width/(float)bounds.width, height/(float)bounds.height));
     /**create and initialize variables**/
     /**set width and height of texture**/
 }
