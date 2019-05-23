@@ -38,6 +38,10 @@
 			<Add library="sfml-system" />
 			<Add directory="/home/mahesh/apps/SFML-2.5.1/lib" />
 		</Linker>
+		<Unit filename="LavaParticle.cpp" />
+		<Unit filename="LavaParticle.hpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
 		<Unit filename="Volcano.cpp" />
 		<Unit filename="Volcano.hpp">
 			<Option target="&lt;{~None~}&gt;" />
