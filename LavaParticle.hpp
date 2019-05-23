@@ -6,6 +6,8 @@
 class LavaParticle : public sf::Drawable, public sf::Transformable {
     sf::Vector2f vel;
 
+    float g; //gravity
+
     sf::CircleShape particle;
 
     static const int LIM_VELX = 1000;
@@ -15,12 +17,15 @@ public:
     LavaParticle();
     LavaParticle(sf::Vector2f pos);
 
-    void update();
+    void update(float);
+    void revert(float);
+
+    void setGravity(float);
 
 private:
 
     void setRandomValues();
-    void initCirclShape();
+    void initVars();
 
     virtual void draw(sf::RenderTarget &target,sf::RenderStates states) {
         states.transform *= getTransform();
